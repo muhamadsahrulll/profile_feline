@@ -58,6 +58,12 @@ export function About() {
     image: '/team/member-7.png',
     color: '#6A4C93',
   },
+  {
+    name: 'Aurelia',
+    role: 'Artist',
+    image: '/team/member-8.png',
+    color: '#A8DADC',
+  }
 ]
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
