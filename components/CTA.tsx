@@ -6,13 +6,19 @@ export function CTA() {
   return (
     <section
       id="contact"
-      className="py-24 bg-[#fbf5df]"
+      className="
+        py-24
+        bg-gradient-to-b
+        from-[#faf7ea]
+        via-[#fffaf0]
+        to-[#faf7ea]
+      "
     >
       <div className="max-w-7xl mx-auto px-6">
 
         <div
           className="
-            rounded-[40px]
+            rounded-[24px] lg:rounded-[40px]
             overflow-hidden
 
             bg-gradient-to-br
@@ -28,12 +34,22 @@ export function CTA() {
           <div className="grid lg:grid-cols-2">
 
             {/* LEFT */}
-            <div className="p-10 lg:p-16">
+            <div className="p-6 sm:p-8 lg:p-16">
               <p className="uppercase tracking-[0.3em] text-orange-500 text-sm font-semibold mb-4">
                 Contact Us
               </p>
 
-              <h2 className="text-5xl font-bold text-slate-950 leading-tight mb-6">
+              <h2
+                className="
+                  text-3xl
+                  sm:text-4xl
+                  lg:text-5xl
+                  font-bold
+                  text-slate-950
+                  leading-tight
+                  mb-6
+                "
+              >
                 Let&apos;s Build Something Amazing Together
               </h2>
 
@@ -43,7 +59,16 @@ export function CTA() {
                 or just want to say hello, we'd love to hear from you.
               </p>
 
-              <div className="space-y-4">
+              <div
+                className="
+                  bg-white/60
+                  backdrop-blur-sm
+                  rounded-3xl
+                  p-5
+                  border
+                  border-white/50
+                "
+              >
 
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
@@ -55,9 +80,16 @@ export function CTA() {
                       Email
                     </p>
 
-                    <p className="font-medium">
-                      felinestudiosofficials@gmail.com
-                    </p>
+                    <p
+                    className="
+                      font-medium
+                      break-all
+                      text-sm
+                      sm:text-base
+                    "
+                  >
+                    felinestudiosofficials@gmail.com
+                  </p>
                   </div>
                 </div>
 
@@ -65,7 +97,7 @@ export function CTA() {
             </div>
 
             {/* RIGHT */}
-            <div className="p-10 lg:p-16 bg-white/40 backdrop-blur-sm">
+            <div className="p-10 lg:p-16 bg-white/70 backdrop-blur-sm">
 
               <form className="space-y-5">
 
@@ -85,7 +117,7 @@ export function CTA() {
                       placeholder="Your name"
                       className="
                         w-full
-                        h-14
+                        h-12 sm:h-14
                         pl-12
                         rounded-2xl
                         border
@@ -115,7 +147,7 @@ export function CTA() {
                       placeholder="your@email.com"
                       className="
                         w-full
-                        h-14
+                        h-12 sm:h-14
                         pl-12
                         rounded-2xl
                         border
@@ -139,7 +171,7 @@ export function CTA() {
                     placeholder="Project Inquiry"
                     className="
                       w-full
-                      h-14
+                      h-12 sm:h-14
                       px-5
                       rounded-2xl
                       border
@@ -187,7 +219,7 @@ export function CTA() {
                   type="submit"
                   className="
                     w-full
-                    h-14
+                    h-12 sm:h-14
 
                     rounded-2xl
 

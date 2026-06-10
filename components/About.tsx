@@ -159,7 +159,7 @@ export function About() {
                   </div>
                 </div>
 
-                <div>s
+                <div>
                   <div className="text-3xl font-bold text-slate-950">
                     2025
                   </div>
