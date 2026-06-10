@@ -1,26 +1,85 @@
 'use client'
 
 import Image from 'next/image'
+import { useCallback } from 'react'
+import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+
 
 export function About() {
-  const team = [
+  type TeamMember = {
+  name: string
+  role: string
+  image: string
+  color: string
+  featured?: boolean
+}
+  const team: TeamMember[] = [
+  {
+    name: 'Abdul Aziz',
+    role: 'Co-Founder',
+    image: '/team/member-1.png',
+    color: '#8DD3D5',
+  },
+  {
+    name: 'Idham Malik',
+    role: 'CEO',
+    image: '/team/member-2.png',
+    color: '#D48A2C',
+  },
+  {
+    name: 'Sahrul',
+    role: 'Co-Founder',
+    image: '/team/member-3.png',
+    color: '#88BE4D',
+  },
+  {
+    name: 'Janice',
+    role: 'Programmer & Artist',
+    image: '/team/member-4.png',
+    color: '#E33D9A',
+  },
+  {
+    name: 'Ven',
+    role: 'Artist & Copywriter',
+    image: '/team/member-5.png',
+    color: '#4C7EFF',
+  },
+  {
+    name: 'Alen',
+    role: 'Artist & Animator',
+    image: '/team/member-6.png',
+    color: '#F2B134',
+  },
+  {
+    name: 'Dania',
+    role: 'Artist',
+    image: '/team/member-7.png',
+    color: '#6A4C93',
+  },
+]
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
     {
-      name: 'Abdul Aziz',
-      role: 'Co-Founder',
-      image: '/team/member-1.png',
+      loop: true,
+      align: 'center',
     },
-    {
-      name: 'Idham Malik',
-      role: 'CEO',
-      image: '/team/member-2.png',
-      featured: true,
-    },
-    {
-      name: 'Sahrul',
-      role: 'Co-Founder',
-      image: '/team/member-3.png',
-    },
-  ]
+    [
+      Autoplay({
+        delay: 3000,
+        stopOnInteraction: false,
+      }),
+    ]
+  )
+
+  const scrollPrev = useCallback(() => {
+    emblaApi?.scrollPrev()
+  }, [emblaApi])
+
+  const scrollNext = useCallback(() => {
+    emblaApi?.scrollNext()
+  }, [emblaApi])
 
   return (
     <section
@@ -100,7 +159,7 @@ export function About() {
                   </div>
                 </div>
 
-                <div>
+                <div>s
                   <div className="text-3xl font-bold text-slate-950">
                     2025
                   </div>
@@ -115,9 +174,30 @@ export function About() {
         </div>
 
         {/* OUR TEAM */}
-        <div className="mt-28">
+
+        <div className="mt-28 relative">
+
+          {/* Background Glow */}
+
+          <div className="absolute inset-0 -z-10 pointer-events-none">
+            <div
+              className="
+                absolute
+                left-1/2
+                top-40
+                -translate-x-1/2
+                w-[600px]
+                h-[600px]
+                rounded-full
+                bg-orange-100
+                opacity-60
+                blur-[140px]
+              "
+            />
+          </div>
 
           <div className="text-center mb-16">
+
             <p className="uppercase tracking-[0.3em] text-orange-500 text-sm font-semibold mb-4">
               Our Team
             </p>
@@ -130,54 +210,123 @@ export function About() {
               The passionate people behind Feline Studios who
               transform ideas into memorable gaming experiences.
             </p>
+
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 items-end">
+          <div
+            className="overflow-hidden"
+            ref={emblaRef}
+          >
+            <div className="flex items-end">
 
-            {team.map((member) => (
-              <div
-                key={member.name}
-                className={`
-                  text-center
-                  ${member.featured ? 'lg:-translate-y-8' : ''}
-                `}
-              >
+              {team.map((member) => (
+
                 <div
-                  className={`
-                    mx-auto
-                    overflow-hidden
-                    rounded-[32px]
-                    bg-gradient-to-br
-                    from-yellow-200
-                    to-orange-200
-                    shadow-lg
-
-                    ${
-                      member.featured
-                        ? 'w-80 h-96'
-                        : 'w-72 h-80'
-                    }
-                  `}
+                  key={member.name}
+                  className="
+                    flex-[0_0_100%]
+                    md:flex-[0_0_50%]
+                    lg:flex-[0_0_33.333%]
+                    px-4
+                  "
                 >
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={500}
-                    height={500}
-                    className="w-full h-full object-cover"
-                  />
+
+                  <div
+                    className={`
+                      text-center
+                      transition-all
+                      duration-500
+                      ${member.featured ? 'lg:-translate-y-8' : ''}
+                    `}
+                  >
+
+                    <div
+                      className={`
+                        mx-auto
+                        overflow-hidden
+                        rounded-[32px]
+                        bg-gradient-to-br
+                        from-yellow-200
+                        to-orange-200
+                        shadow-lg
+
+                        ${
+                          member.featured
+                            ? 'w-80 h-96'
+                            : 'w-72 h-80'
+                        }
+                      `}
+                    >
+
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={500}
+                        height={500}
+                        className="w-full h-full object-cover"
+                      />
+
+                    </div>
+
+                    <h3 className="mt-6 text-2xl font-bold text-slate-950">
+                      {member.name}
+                    </h3>
+
+                    <p className="text-orange-500 font-medium">
+                      {member.role}
+                    </p>
+
+                  </div>
+
                 </div>
 
-                <h3 className="mt-6 text-2xl font-bold text-slate-950">
-                  {member.name}
-                </h3>
+              ))}
 
-                <p className="text-orange-500 font-medium">
-                  {member.role}
-                </p>
-              </div>
-            ))}
+            </div>
           </div>
+
+          {/* Navigation */}
+
+          <div className="flex justify-center gap-4 mt-12">
+
+            <button
+              onClick={scrollPrev}
+              className="
+                w-12
+                h-12
+                rounded-full
+                bg-white
+                shadow-md
+                hover:shadow-lg
+                transition-all
+                flex
+                items-center
+                justify-center
+              "
+            >
+              <ChevronLeft size={20} />
+            </button>
+
+            <button
+              onClick={scrollNext}
+              className="
+                w-12
+                h-12
+                rounded-full
+                bg-white
+                shadow-md
+                hover:shadow-lg
+                transition-all
+                flex
+                items-center
+                justify-center
+              "
+            >
+              <ChevronRight size={20} />
+            </button>
+
+          </div>
+
         </div>
 
       </div>
