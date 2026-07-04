@@ -1,6 +1,7 @@
 
 'use client'
 
+import Image from 'next/image'
 import { PawPatternOverlay } from './PawPatternOverlay'
 
 export function Hero() {
@@ -122,21 +123,33 @@ export function Hero() {
             </div>
 
             <div className="flex flex-wrap items-center gap-4">
-              <button className="bg-yellow-400 text-slate-950 px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 transition shadow-sm">
+              <a href="#games" className="bg-yellow-400 text-slate-950 px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 transition shadow-sm inline-block">
                 Explore Games
-              </button>
-              <button className="bg-amber-700 text-white px-8 py-3 rounded-full font-semibold hover:bg-amber-800 transition shadow-sm">
+              </a>
+              <a href="#about" className="bg-amber-700 text-white px-8 py-3 rounded-full font-semibold hover:bg-amber-800 transition shadow-sm inline-block">
                 About Us
-              </button>
+              </a>
             </div>
           </div>
 
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[30rem] aspect-square rounded-[3rem] bg-gradient-to-br from-yellow-400 via-yellow-300 to-yellow-500 shadow-[0_80px_140px_-60px_rgba(245,158,11,0.85)] overflow-hidden">
+            <div className="relative w-full max-w-[30rem] aspect-square rounded-[3rem] bg-gradient-to-br from-yellow-400 via-yellow-300 to-yellow-500 shadow-[0_80px_140px_-60px_rgba(245,158,11,0.85)] overflow-hidden flex items-center justify-center">
               <div className="absolute inset-x-8 inset-y-10 rounded-full bg-yellow-200/70" />
               <div className="absolute -left-8 top-8 h-32 w-32 rounded-full bg-yellow-200/90 opacity-90" />
               <div className="absolute bottom-12 right-10 h-24 w-24 rounded-full bg-yellow-100/90 opacity-90" />
               <div className="absolute inset-0 rounded-[3rem] border border-white/10" />
+              
+              {/* Feline White Logo */}
+              <div className="relative z-50 w-100 h-100">
+                <Image
+                  src="/Feline_PNG_white.png"
+                  alt="Feline Studios"
+                  fill
+                  className="object-contain"
+                  sizes="160px"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
