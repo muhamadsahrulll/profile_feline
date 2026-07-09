@@ -1,12 +1,12 @@
 'use client'
 
-import { Globe } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
   FaInstagram,
   FaDiscord,
-  FaItchIo
+  FaItchIo,
+  FaLinkedin
 } from 'react-icons/fa'
 
 export function Footer() {
@@ -69,7 +69,9 @@ export function Footer() {
           <div className="flex justify-center gap-4 mt-10">
 
             <a
-              href="#"
+              href="https://discord.gg/M6aCf4sXm"
+              target="_blank"
+              rel="noopener noreferrer"
               className="
                 w-12 h-12
                 rounded-full
@@ -85,7 +87,7 @@ export function Footer() {
             </a>
 
             <a
-              href="#"
+              href="https://www.instagram.com/felinestudios_/"
               className="
                 w-12 h-12
                 rounded-full
@@ -101,7 +103,7 @@ export function Footer() {
             </a>
 
             <a
-              href="mailto:felinestudiosofficials@gmail.com"
+              href="https://felinestudios.itch.io/"
               className="
                 w-12 h-12
                 rounded-full
@@ -117,7 +119,9 @@ export function Footer() {
             </a>
 
             <a
-              href="#"
+              href="https://www.linkedin.com/company/feline-studios"
+              target="_blank"
+              rel="noopener noreferrer"
               className="
                 w-12 h-12
                 rounded-full
@@ -129,7 +133,7 @@ export function Footer() {
                 transition
               "
             >
-              <Globe size={20} />
+              <FaLinkedin size={20} />
             </a>
 
           </div>
