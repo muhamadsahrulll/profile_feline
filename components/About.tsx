@@ -9,62 +9,80 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 export function About() {
   type TeamMember = {
-  name: string
-  role: string
-  image: string
-  color: string
-  featured?: boolean
-}
-  const team: TeamMember[] = [
-  {
-    name: 'Abdul Aziz',
-    role: 'Co-Founder',
-    image: '/team/member-1.png',
-    color: '#8DD3D5',
-  },
-  {
-    name: 'Idham Malik',
-    role: 'CEO',
-    image: '/team/member-2.png',
-    color: '#D48A2C',
-  },
-  {
-    name: 'Sahrul',
-    role: 'Co-Founder',
-    image: '/team/member-3.png',
-    color: '#88BE4D',
-  },
-  {
-    name: 'Janice',
-    role: 'Programmer & Artist',
-    image: '/team/member-4.png',
-    color: '#E33D9A',
-  },
-  {
-    name: 'Ven',
-    role: 'Artist & Copywriter',
-    image: '/team/member-5.png',
-    color: '#4C7EFF',
-  },
-  {
-    name: 'Alen',
-    role: 'Artist & Animator',
-    image: '/team/member-6.png',
-    color: '#F2B134',
-  },
-  {
-    name: 'Dania',
-    role: 'Artist',
-    image: '/team/member-7.png',
-    color: '#6A4C93',
-  },
-  {
-    name: 'Aurelia',
-    role: 'Artist',
-    image: '/team/member-8.png',
-    color: '#A8DADC',
+    name: string
+    role: string
+    image: string
+    color: string
+    featured?: boolean
   }
-]
+  const team: TeamMember[] = [
+    {
+      name: 'Abdul Aziz',
+      role: 'Co-Founder',
+      image: '/team/member-5.png',
+      color: '#8DD3D5',
+    },
+    {
+      name: 'Idham Malik',
+      role: 'CEO',
+      image: '/team/idham.png',
+      color: '#D48A2C',
+    },
+    {
+      name: 'Sahrul',
+      role: 'Co-Founder',
+      image: '/team/sahrul.png',
+      color: '#88BE4D',
+    },
+    {
+      name: 'Akmal',
+      role: 'Programmer & Game Designer',
+      image: '/team/akmal.png',
+      color: '#8DD3D5',
+    },
+    {
+      name: 'Janice',
+      role: 'Programmer & 2D Artist',
+      image: '/team/Janice.png',
+      color: '#E33D9A',
+    },
+    {
+      name: 'Ven',
+      role: '2D Artist & Copywriter',
+      image: '/team/member-5.png',
+      color: '#4C7EFF',
+    },
+    {
+      name: 'Alen',
+      role: '2D rtist & Animator',
+      image: '/team/member-6.png',
+      color: '#F2B134',
+    },
+    {
+      name: 'Dania',
+      role: '2D Artist',
+      image: '/team/member-7.png',
+      color: '#6A4C93',
+    },
+    {
+      name: 'Aurelia',
+      role: '2D Artist',
+      image: '/team/AUREL.png',
+      color: '#A8DADC',
+    },
+    {
+      name: 'Liya',
+      role: '2D Artist',
+      image: '/team/KAK LIYA.png',
+      color: '#A8DADC',
+    },
+    {
+      name: 'Jansen',
+      role: '3D Artist',
+      image: '/team/jansen.png',
+      color: '#A8DADC',
+    }
+  ]
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
@@ -256,10 +274,9 @@ export function About() {
                         to-orange-200
                         shadow-lg
 
-                        ${
-                          member.featured
-                            ? 'w-80 h-96'
-                            : 'w-72 h-80'
+                        ${member.featured
+                          ? 'w-80 h-96'
+                          : 'w-72 h-80'
                         }
                       `}
                     >
