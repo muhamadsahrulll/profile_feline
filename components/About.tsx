@@ -54,7 +54,7 @@ export function About() {
     },
     {
       name: 'Alen',
-      role: '2D rtist & Animator',
+      role: '2D Artist & Animator',
       image: '/team/ALEN.png',
       color: '#F2B134',
     },
