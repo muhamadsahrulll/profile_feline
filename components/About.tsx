@@ -55,13 +55,13 @@ export function About() {
     {
       name: 'Alen',
       role: '2D rtist & Animator',
-      image: '/team/member-6.png',
+      image: '/team/ALEN.png',
       color: '#F2B134',
     },
     {
       name: 'Dania',
       role: '2D Artist',
-      image: '/team/member-7.png',
+      image: '/team/DANIA.png',
       color: '#6A4C93',
     },
     {
@@ -80,6 +80,12 @@ export function About() {
       name: 'Jansen',
       role: '3D Artist',
       image: '/team/jansen.png',
+      color: '#A8DADC',
+    },
+    {
+      name: 'Asep',
+      role: '2D Artist',
+      image: '/team/ASEP.png',
       color: '#A8DADC',
     }
   ]
