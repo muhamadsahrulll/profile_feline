@@ -140,13 +140,13 @@ export function Hero() {
               <div className="absolute inset-0 rounded-[3rem] border border-white/10" />
               
               {/* Feline White Logo */}
-              <div className="relative z-50 w-100 h-100">
+              <div className="relative z-0 pointer-events-none w-full h-full">
                 <Image
                   src="/Feline_PNG_white.png"
                   alt="Feline Studios"
                   fill
-                  className="object-contain"
-                  sizes="160px"
+                  className="object-contain opacity-95"
+                  sizes="(max-width: 1024px) 100vw, 480px"
                   priority
                 />
               </div>
