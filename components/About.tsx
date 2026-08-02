@@ -19,7 +19,7 @@ export function About() {
     {
       name: 'Abdul Aziz',
       role: 'Co-Founder',
-      image: '/team/member-5.png',
+      image: '/team/Azis.png',
       color: '#8DD3D5',
     },
     {
@@ -49,7 +49,7 @@ export function About() {
     {
       name: 'Ven',
       role: '2D Artist & Copywriter',
-      image: '/team/member-5.png',
+      image: '/team/Vennesia.png',
       color: '#4C7EFF',
     },
     {
