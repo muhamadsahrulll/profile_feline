@@ -24,7 +24,7 @@ export function About() {
     },
     {
       name: 'Idham Malik',
-      role: 'CEO',
+      role: 'Founder',
       image: '/team/idham.png',
       color: '#D48A2C',
     },

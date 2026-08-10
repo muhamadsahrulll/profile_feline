@@ -102,17 +102,6 @@ export function FeaturedGames() {
                     priority
                   />
                 )}
-
-                {/* Feline Logo Overlay */}
-                <div className="relative w-32 h-32 z-10">
-                  <Image
-                    src="/Feline_PNG_white.png"
-                    alt="Feline Studios"
-                    fill
-                    className="object-contain"
-                    sizes="128px"
-                  />
-                </div>
               </div>
 
               {/* Content */}
@@ -237,4 +226,4 @@ export function FeaturedGames() {
       </div>
     </section>
   )
-}
+}
