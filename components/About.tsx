@@ -134,6 +134,7 @@ export function About() {
             <div className="p-10 lg:p-16">
               <div
                 className="
+                  relative
                   aspect-square
                   rounded-[36px]
                   overflow-hidden
@@ -142,10 +143,21 @@ export function About() {
                   via-orange-300
                   to-yellow-400
                   shadow-[0_40px_80px_-30px_rgba(249,115,22,0.45)]
+                  p-8
+                  flex
+                  items-center
+                  justify-center
                 "
               >
-                <div className="w-full h-full flex items-center justify-center text-8xl">
-                  🐾
+                <div className="relative w-full h-full pointer-events-none">
+                  <Image
+                    src="/Feline_PNG_white.png"
+                    alt="Feline Studios"
+                    fill
+                    className="object-contain opacity-95"
+                    sizes="(max-width: 1024px) 100vw, 480px"
+                    priority
+                  />
                 </div>
               </div>
             </div>
