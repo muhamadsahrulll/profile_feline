@@ -88,7 +88,7 @@ export function CTA() {
                       sm:text-base
                     "
                   >
-                    felinestudiosofficials@gmail.com
+                    contact.felinestudios@gmail.com
                   </p>
                   </div>
                 </div>
