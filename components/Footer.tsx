@@ -37,28 +37,28 @@ export function Footer() {
           {/* Navigation */}
           <div className="flex flex-wrap justify-center gap-8 mt-10">
             <Link
-              href="#home"
+              href="/#home"
               className="text-slate-300 hover:text-yellow-300 transition"
             >
               Home
             </Link>
 
             <Link
-              href="#games"
+              href="/#games"
               className="text-slate-300 hover:text-yellow-300 transition"
             >
               Games
             </Link>
 
             <Link
-              href="#about"
+              href="/#about"
               className="text-slate-300 hover:text-yellow-300 transition"
             >
               About
             </Link>
 
             <Link
-              href="#contact"
+              href="/#contact"
               className="text-slate-300 hover:text-yellow-300 transition"
             >
               Contact
@@ -151,10 +151,10 @@ export function Footer() {
 
             <div className="flex gap-6 text-sm text-slate-400">
               <Link
-                href="/privacy"
+                href="/privacy-policy/dream-memories"
                 className="hover:text-white transition"
               >
-                Privacy Policy
+                Privacy Policy (Dream Memories)
               </Link>
 
               <Link

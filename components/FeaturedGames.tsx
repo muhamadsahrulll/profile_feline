@@ -1,6 +1,6 @@
 'use client'
 
-import { Gamepad2, Globe, Download } from 'lucide-react'
+import { Gamepad2, Globe, Download, ShieldCheck } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -18,6 +18,7 @@ interface Game {
   image: string
   link: string
   windowsLink?: string
+  privacyLink?: string
   platforms: string[]
   tags: string[]
 }
@@ -31,6 +32,7 @@ export function FeaturedGames() {
       image: '/sigma.jpg',
       link: 'https://felinestudios.itch.io/dream-memories',
       windowsLink: 'https://felinestudios.itch.io/dream-memories',
+      privacyLink: '/privacy-policy/dream-memories',
       platforms: ['HTML5', 'Windows'],
       tags: ['2D Board Game', '2D Roguelike Card Game'],
     },
@@ -216,6 +218,36 @@ export function FeaturedGames() {
                     >
                       <WindowsIcon className="w-4 h-4 fill-current" />
                       Download Windows
+                    </Link>
+                  )}
+
+                  {game.privacyLink && (
+                    <Link
+                      href={game.privacyLink}
+                      className="
+                        inline-flex
+                        items-center
+                        gap-1.5
+                        px-5
+                        py-2.5
+                        bg-white
+                        border
+                        border-gray-300
+                        text-slate-700
+                        rounded-full
+                        font-semibold
+                        text-sm
+                        hover:border-amber-500
+                        hover:text-amber-700
+                        hover:bg-amber-50/50
+                        hover:shadow-sm
+                        transition-all
+                        duration-300
+                        hover:scale-105
+                      "
+                    >
+                      <ShieldCheck className="w-4 h-4 text-amber-600" />
+                      Privacy Policy
                     </Link>
                   )}
                 </div>

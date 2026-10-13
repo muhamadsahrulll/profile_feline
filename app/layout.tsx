@@ -10,6 +10,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://felinestudios.com'),
   title: 'Feline Studios - Indie Game Developer',
   description: 'Crafting cozy and memorable indie game experiences. Small studio creating fun and charming games.',
   generator: 'v0.app',

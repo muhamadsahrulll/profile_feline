@@ -43,28 +43,28 @@ export function Header() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-12 flex-1 justify-center">
           <Link
-            href="#home"
+            href="/#home"
             className="text-[15px] font-medium tracking-wide text-slate-800 hover:text-amber-500 transition-colors"
           >
             HOME
           </Link>
 
           <Link
-            href="#games"
+            href="/#games"
             className="text-[15px] font-medium tracking-wide text-slate-800 hover:text-amber-500 transition-colors"
           >
             GAMES
           </Link>
 
           <Link
-            href="#about"
+            href="/#about"
             className="text-[15px] font-medium tracking-wide text-slate-800 hover:text-amber-500 transition-colors"
           >
             ABOUT US
           </Link>
 
           <Link
-            href="#contact"
+            href="/#contact"
             className="text-[15px] font-medium tracking-wide text-slate-800 hover:text-amber-500 transition-colors"
           >
             CONTACT
@@ -74,7 +74,7 @@ export function Header() {
           {/* Desktop Button */}
           <div className="hidden md:block">
             <Link
-              href="#contact"
+              href="/#contact"
               className="
                 inline-flex items-center justify-center
 
@@ -128,35 +128,35 @@ export function Header() {
           >
             <div className="space-y-4">
               <Link
-                href="#home"
+                href="/#home"
                 className="block text-slate-700 font-medium"
               >
                 HOME
               </Link>
 
               <Link
-                href="#games"
+                href="/#games"
                 className="block text-slate-700 font-medium"
               >
                 GAMES
               </Link>
 
               <Link
-                href="#about"
+                href="/#about"
                 className="block text-slate-700 font-medium"
               >
                 ABOUT US
               </Link>
 
               <Link
-                href="#contact"
+                href="/#contact"
                 className="block text-slate-700 font-medium"
               >
                 CONTACT
               </Link>
 
               <Link
-                href="#contact"
+                href="/#contact"
                 className="
                   block
                   w-full
