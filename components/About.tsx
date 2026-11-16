@@ -18,7 +18,7 @@ export function About() {
   const team: TeamMember[] = [
     {
       name: 'Abdul Aziz',
-      role: 'Co-Founder',
+      role: 'GameProgrammer',
       image: '/team/Azis.png',
       color: '#8DD3D5',
     },
@@ -47,12 +47,6 @@ export function About() {
       color: '#E33D9A',
     },
     {
-      name: 'Ven',
-      role: '2D Artist & Copywriter',
-      image: '/team/Vennesia.png',
-      color: '#4C7EFF',
-    },
-    {
       name: 'Alen',
       role: '2D Artist & Animator',
       image: '/team/ALEN.png',
@@ -68,18 +62,6 @@ export function About() {
       name: 'Aurelia',
       role: '2D Artist',
       image: '/team/AUREL.png',
-      color: '#A8DADC',
-    },
-    {
-      name: 'Liya',
-      role: '2D Artist',
-      image: '/team/KAK LIYA.png',
-      color: '#A8DADC',
-    },
-    {
-      name: 'Jansen',
-      role: '3D Artist',
-      image: '/team/jansen.png',
       color: '#A8DADC',
     },
     {
